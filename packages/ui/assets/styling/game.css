@@ -1,0 +1,26 @@
+#game {
+  display: flex;
+  flex-direction: column;
+  padding: 10pt;
+  border-radius: 20pt;
+  font-size: 1rem;
+}
+
+#game > ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+#game > ul > li {
+  list-style: none;
+  font-size: 1rem;
+}
+
+#game input {
+  border: none;
+  border-bottom: 1px #f8f8f8 solid;
+  background-color: transparent;
+  color: #f8f8f8;
+  outline: none;
+}

@@ -5,6 +5,7 @@ edition = "2021"
 
 [dependencies]
 dioxus = { workspace = true, features = ["router", "fullstack"] }
+dioxus-logger = "0.7.1"
 ui = { workspace = true }
 
 [features]

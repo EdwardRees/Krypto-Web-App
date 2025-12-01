@@ -6,8 +6,9 @@ edition = "2021"
 [dependencies]
 chrono = "0.4.42"
 dioxus = { workspace = true, features = ["fullstack"] }
-rand = "0.9.2"
-calculator = "calculator"
+rand = { version = "0.9.2" }
+getrandom = { version = "0.3.4", features = ["wasm_js"]}
+calculator = { workspace=true}
 
 [features]
 server = ["dioxus/server"]

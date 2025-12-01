@@ -1,4 +1,5 @@
 use dioxus::prelude::*;
+use dioxus_logger::tracing::{Level, info};
 
 use ui::Navbar;
 use views::{Blog, Home};
@@ -19,6 +20,7 @@ const FAVICON: Asset = asset!("/assets/favicon.ico");
 const MAIN_CSS: Asset = asset!("/assets/main.css");
 
 fn main() {
+      dioxus_logger::init(Level::INFO).expect("logger failed to init");
     dioxus::launch(App);
 }
 

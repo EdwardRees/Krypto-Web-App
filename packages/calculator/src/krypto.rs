@@ -36,7 +36,7 @@ fn get_vec_count(nums: &Vec<f64>) -> BTreeMap<i64, usize> {
     count
 }
 
-fn valid_input(provided: &Vec<f64>, given: &Vec<f64>) -> bool {
+pub fn valid_input(provided: &Vec<f64>, given: &Vec<f64>) -> bool {
     let provided_count = get_vec_count(provided);
     let given_count = get_vec_count(given);
     provided_count == given_count
