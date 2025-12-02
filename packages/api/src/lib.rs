@@ -1,7 +1,14 @@
 //! This crate contains all shared fullstack server functions.
 use dioxus::prelude::*;
+use calculator::{krypto::{valid_input, setup}, ast::build_ast, solve::solve, eval::eval_tree_nums};
+use serde::{Serialize, Deserialize};
 
-use calculator::{krypto::{valid_input, setup}, solve::solve, ast::build_ast, eval::eval_tree_nums};
+#[derive(Serialize, Deserialize)]
+struct AuthCredentials {
+    user_id: String, // UUID
+    username: String,
+    token: String // jwt
+}
 
 /// Echo the user input on the server.
 #[post("/api/echo")]
@@ -40,3 +47,9 @@ pub async fn calculate(input: String, nums: Vec<f64>, date: f64) -> Result<Strin
         Ok(format!("Good try! You answered: {}.", solution))
     }
 }
+
+#[post("/api/signup")]
+pub async fn signup(username: String, password: String) -> Result<String, ServerFnError> {
+    Ok(String::from("Signed up"))
+}
+

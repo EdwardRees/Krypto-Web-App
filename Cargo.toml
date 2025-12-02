@@ -6,7 +6,9 @@ members = [
     "packages/desktop",
     "packages/mobile",
     "packages/api", 
-    "packages/calculator",
+    "packages/calculator", 
+    "packages/db",
+    "packages/migration"
 ]
 
 [workspace.dependencies]
@@ -16,3 +18,5 @@ dioxus = { version = "0.7.1" }
 ui = { path = "packages/ui" }
 api = { path = "packages/api" }
 calculator = { path = "packages/calculator"}
+db = { path="packages/db"}
+migration = { path="packages/migration"}

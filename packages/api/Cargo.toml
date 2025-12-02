@@ -9,6 +9,8 @@ dioxus = { workspace = true, features = ["fullstack"] }
 rand = { version = "0.9.2" }
 getrandom = { version = "0.3.4", features = ["wasm_js"]}
 calculator = { workspace=true}
+serde_json = "1.0.145"
+serde = "1.0.228"
 
 [features]
 server = ["dioxus/server"]

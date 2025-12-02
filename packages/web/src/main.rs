@@ -2,7 +2,7 @@ use dioxus::prelude::*;
 use dioxus_logger::tracing::{Level, info};
 
 use ui::Navbar;
-use views::{Blog, Home};
+use views::{Games, Home};
 
 mod views;
 
@@ -12,8 +12,8 @@ enum Route {
     #[layout(WebNavbar)]
     #[route("/")]
     Home {},
-    #[route("/blog/:id")]
-    Blog { id: i32 },
+    #[route("/games")]
+    Games {},
 }
 
 const FAVICON: Asset = asset!("/assets/favicon.ico");
@@ -48,8 +48,8 @@ fn WebNavbar() -> Element {
                 "Home"
             }
             Link {
-                to: Route::Blog { id: 1 },
-                "Blog"
+                to: Route::Games {},
+                "Games"
             }
         }
 

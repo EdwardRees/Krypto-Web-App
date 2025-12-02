@@ -1,9 +1,22 @@
+/*#164e63 */
+/*#22d3ee*/
 #game {
   display: flex;
   flex-direction: column;
   padding: 10pt;
   border-radius: 20pt;
   font-size: 1rem;
+}
+
+#game h4{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+#game .number {
+  font-size: 2rem;
+  padding-left: 10pt;
 }
 
 #game > ul {
@@ -14,7 +27,7 @@
 
 #game > ul > li {
   list-style: none;
-  font-size: 1rem;
+  font-size: 2rem;
 }
 
 #game input {
@@ -23,4 +36,30 @@
   background-color: transparent;
   color: #f8f8f8;
   outline: none;
+  width: 90%;
+  font-size: 1.5rem;
+  height: 2rem;
 }
+
+#input_box {
+  width: 100%; 
+  vertical-align: bottom;
+}
+
+#game #input_box button {
+  outline: none;
+  padding: 1rem 1.25rem;
+  font-size: 1.2rem;
+  border-radius: 15pt;
+  vertical-align: bottom;
+  background-color: transparent;
+  color: #164e63;
+  border: 1pt #164e63 solid;
+}
+
+#game #input_box button:hover {
+  background-color: #164e63;
+  color: #f8f8f8;
+  outline: none;
+}
+
