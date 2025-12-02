@@ -8,8 +8,9 @@ members = [
     "packages/api", 
     "packages/calculator", 
     "packages/db",
-    "packages/migration"
-]
+    "packages/migration", 
+    "packages/entity"
+    ]
 
 [workspace.dependencies]
 dioxus = { version = "0.7.1" }
@@ -20,3 +21,4 @@ api = { path = "packages/api" }
 calculator = { path = "packages/calculator"}
 db = { path="packages/db"}
 migration = { path="packages/migration"}
+entity = { path="packages/entity"}

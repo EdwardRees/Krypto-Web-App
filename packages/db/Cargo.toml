@@ -7,4 +7,5 @@ edition = "2024"
 [dependencies]
 dotenv = "0.15.0"
 sea-orm = { version = "2.0.0-rc.1", features = [ "sqlx-postgres", "runtime-tokio-native-tls", "with-uuid", "with-json", "with-chrono", "macros" ] }
-migration={path="migration"}
+migration = { workspace = true }
+entity = { workspace = true }

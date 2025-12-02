@@ -112,6 +112,7 @@ dependencies = [
  "calculator",
  "chrono",
  "dioxus",
+ "entity",
  "getrandom 0.3.4",
  "rand 0.9.2",
  "serde",
@@ -1221,6 +1222,8 @@ name = "db"
 version = "0.1.0"
 dependencies = [
  "dotenv",
+ "entity",
+ "migration",
  "sea-orm 2.0.0-rc.20",
 ]
 
@@ -2110,6 +2113,10 @@ name = "endi"
 version = "1.1.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "66b7e2430c6dff6a955451e2cfc438f09cea1965a9d6f87f7e3b90decc014099"
+
+[[package]]
+name = "entity"
+version = "0.1.0"
 
 [[package]]
 name = "enumflags2"
@@ -5254,7 +5261,9 @@ dependencies = [
  "ouroboros",
  "sea-orm-macros 1.1.19",
  "sea-query 0.32.7",
+ "sea-query-binder",
  "serde",
+ "sqlx",
  "strum 0.26.3",
  "thiserror 2.0.17",
  "tracing",
@@ -5304,6 +5313,9 @@ dependencies = [
  "dotenvy",
  "glob",
  "regex",
+ "sea-schema 0.16.2",
+ "sqlx",
+ "tokio",
  "tracing",
  "tracing-subscriber",
  "url",
@@ -5383,6 +5395,16 @@ dependencies = [
 ]
 
 [[package]]
+name = "sea-query-binder"
+version = "0.7.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "b0019f47430f7995af63deda77e238c17323359af241233ec768aba1faea7608"
+dependencies = [
+ "sea-query 0.32.7",
+ "sqlx",
+]
+
+[[package]]
 name = "sea-query-derive"
 version = "0.4.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -5434,7 +5456,9 @@ checksum = "2239ff574c04858ca77485f112afea1a15e53135d3097d0c86509cef1def1338"
 dependencies = [
  "futures",
  "sea-query 0.32.7",
+ "sea-query-binder",
  "sea-schema-derive",
+ "sqlx",
 ]
 
 [[package]]

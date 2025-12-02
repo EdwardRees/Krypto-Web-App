@@ -22,7 +22,7 @@ pub async fn connect_db() -> Result<DatabaseConnection, DbErr>{
     let host= read_env("DB_HOST", "No database host found!")?;
     let database = read_env("DB_DATABASE", "No database found!")?;
 
-    let db: DatabaseConnection = Database::connect(format!("postgres://{}:{}@{}/{}", username, password, host, database)).await?;
+    let db: DatabaseConnection = Database::connect(format!("postgresql://{}:{}@{}/{}", username, password, host, database)).await?;
 
     Ok(db)
 }
