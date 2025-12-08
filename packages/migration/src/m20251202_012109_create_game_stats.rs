@@ -17,7 +17,7 @@ impl MigrationTrait for Migration {
                     .col(ColumnDef::new(Problem::OwnerId).uuid())
                     .col(string(Problem::Equation))
                     .col(string(Problem::Numbers)) // csv
-                    .col(string(Problem::Date))
+                    .col(ColumnDef::new(Problem::Date).timestamp())
                     .to_owned(),
             )
             .await

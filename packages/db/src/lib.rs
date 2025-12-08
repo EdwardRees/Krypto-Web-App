@@ -1,20 +1,20 @@
 use dotenv::dotenv;
-use sea_orm::{Database, DatabaseConnection, DbErr};
+use sea_orm::{Database, DatabaseConnection};
 use std::env;
 
-fn read_env(key: &str, error: &str) -> Result<String, DbErr>{
+fn read_env(key: &str, error: &str) -> Result<String, sea_orm::error::DbErr>{
     let value = match env::var(key) {
         Ok(value) => value,
         Err(_) => {
-            return Err(DbErr::Custom(String::from(error)));
+            return Err(sea_orm::error::DbErr::Custom(String::from(error)));
         }
     };
 
     Ok(value)
 }
 
-pub async fn connect_db() -> Result<DatabaseConnection, DbErr>{
-    let _ = dotenv();
+pub async fn establish_connection() -> Result<DatabaseConnection, sea_orm::error::DbErr>{
+    let _ = dotenv().ok();
 
     let username = read_env("DB_USERNAME", "No username found!")?;
 

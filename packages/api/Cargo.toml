@@ -11,7 +11,12 @@ getrandom = { version = "0.3.4", features = ["wasm_js"]}
 calculator = { workspace=true }
 serde_json = "1.0.145"
 serde = "1.0.228"
-entity = { workspace = true }
+# entity = { workspace = true }
+jsonwebtoken = "9.3.1"
+bcrypt = "0.17.1"
+
+auth = { workspace = true }
+cookie = "0.18.1"
 
 [features]
 server = ["dioxus/server"]
